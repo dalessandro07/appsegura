@@ -35,7 +35,7 @@ export default function IncidenteList () {
 
                 <div className='flex flex-col grow h-full bg-black'>
                   {incidente.videoUrl && (
-                    <video src={incidente.videoUrl} className='w-full h-full rounded mb-4' controls />
+                    <video src={incidente.videoUrl} className='w-full h-full rounded mb-4' autoPlay loop controls />
                   )}
                 </div>
 
