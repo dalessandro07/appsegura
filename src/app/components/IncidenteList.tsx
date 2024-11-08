@@ -17,14 +17,14 @@ export default function IncidenteList () {
           const maps_link = `https://www.google.com/maps/search/?api=1&query=${incidente.ubicacion}`
 
           return (
-            <Card key={index} className='mb-4'>
-              <CardHeader>
-                <CardTitle className='text-lg flex items-center'>
+            <div key={index} className='mb-4'>
+              <header>
+                <h2 className='text-lg flex items-center'>
                   <Icon className='mr-2 h-5 w-5' />
                   {incidente.tipo}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
+                </h2>
+              </header>
+              <section>
                 {incidente.videoUrl && (
                   <video src={incidente.videoUrl} className='w-full mt-2 rounded mb-5' controls />
                 )}
@@ -40,8 +40,8 @@ export default function IncidenteList () {
                 <p className='text-sm text-gray-500'>Ocurrió en: <a className='underline text-blue-600' target='_blank' href={maps_link} rel='noreferrer'>{incidente.ubicacion}</a></p>
 
                 <p className='text-sm text-gray-500'>Fecha: {new Date(incidente.fecha).toLocaleString()}</p>
-              </CardContent>
-            </Card>
+              </section>
+            </div>
           )
         })}
 

@@ -9,10 +9,10 @@ export default async function Home () {
   return (
     <main className='p-5 flex flex-col gap-10'>
       <header className='flex justify-between items-center'>
-        <div className='flex items-center gap-1'>
+        <Link href='/' className='flex items-center gap-1'>
           <EarthLockIcon size={32} />
           <span className='text-xs font-bold'>AppSegura</span>
-        </div>
+        </Link>
 
         {user ? (
           <div className='flex items-center gap-5'>
@@ -29,6 +29,11 @@ export default async function Home () {
               <li>
                 <Link className='underline' href='/register'>
                   Registrarse
+                </Link>
+              </li>
+              <li>
+                <Link className='underline' href='/reportes'>
+                  Reportes
                 </Link>
               </li>
             </ul>

@@ -46,14 +46,7 @@ export async function register (initialState: unknown, formData: FormData) {
 
     /* Establecer la sesión para el usuario */
     session.isLoggedIn = true
-    session.user = {
-      dni,
-      contrasena: password,
-      nombre: name,
-      apellido: lastname,
-      nombre_comisaria,
-      ubicacion
-    }
+    session.user = user
     await session.save()
   } catch (error) {
     if (error instanceof Error) {

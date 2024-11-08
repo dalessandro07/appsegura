@@ -15,7 +15,7 @@ export default function IncidenteMain ({ user }: {
 }) {
   const [showForm, setShowForm] = useState(false)
   const [incidentType, setIncidentType] = useState('')
-  const { agregarIncidente, limpiarIncidentes } = useIncidenteStore(state => state)
+  const { agregarIncidente } = useIncidenteStore(state => state)
 
   useEffect(() => {
     if ('Notification' in window) {
@@ -50,7 +50,7 @@ export default function IncidenteMain ({ user }: {
   }
 
   return (
-    <div className='container mx-auto px-4 py-8 max-w-md'>
+    <div className='p-5'>
       <Toaster position='top-center' />
 
       <div className='mb-8'>
@@ -73,8 +73,6 @@ export default function IncidenteMain ({ user }: {
       </div>
 
       <IncidenteList />
-
-      <Button variant='destructive' onClick={limpiarIncidentes} className='mt-4'>Limpiar Incidentes</Button>
     </div>
   )
 }
