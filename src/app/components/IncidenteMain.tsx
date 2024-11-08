@@ -50,10 +50,10 @@ export default function IncidenteMain ({ user }: {
   }
 
   return (
-    <div className='p-5'>
+    <div>
       <Toaster position='top-center' />
 
-      <div className='mb-8'>
+      <div className='mb-8 p-5'>
         {!showForm ? (
           <div className='grid grid-cols-1 gap-4'>
             {Object.entries(incidenteTypes).map(([key, { icon: Icon, label }]) => (

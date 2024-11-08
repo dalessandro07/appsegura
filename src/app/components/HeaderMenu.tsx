@@ -18,7 +18,7 @@ interface HamburgerMenuProps {
 
 export default function HeaderMenu ({ user }: HamburgerMenuProps) {
   return (
-    <header className='flex justify-between items-center'>
+    <header className='flex justify-between items-center p-5'>
       <Link href='/' className='flex items-center gap-1'>
         <EarthLockIcon size={32} />
         <span className='text-xs font-bold'>AppSegura</span>

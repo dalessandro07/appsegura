@@ -6,7 +6,7 @@ export default async function Home () {
   const { user } = await getSession()
 
   return (
-    <main className='p-5 flex flex-col gap-10'>
+    <main className='flex flex-col gap-10'>
       <HeaderMenu user={user} />
 
       <IncidenteMain user={user} />
