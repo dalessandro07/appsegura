@@ -94,12 +94,7 @@ export async function login (initialState: unknown, formData: FormData) {
 
     /* Establecer la sesión para el usuario */
     session.isLoggedIn = true
-    session.user = {
-      dni,
-      nombre_comisaria: user.nombre_comisaria,
-      ubicacion: user.ubicacion,
-      contrasena: password
-    }
+    session.user = user
     await session.save()
   } catch (error) {
     const message = (error instanceof Error) ? error.message : 'Ocurrió un error inesperado.'
