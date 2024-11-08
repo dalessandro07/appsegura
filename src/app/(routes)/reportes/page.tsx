@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import { getSession } from '@/app/actions/action-session'
 import TablaIncidentes from '@/app/components/IncidentesTabla'
-import { Link, EarthLockIcon } from 'lucide-react'
+import { EarthLockIcon } from 'lucide-react'
 
 export default async function PageReportes () {
   const { user } = await getSession()
